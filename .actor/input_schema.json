@@ -1,0 +1,95 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Input schema",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "category": {
+      "type": "string",
+      "title": "Category",
+      "description": "Select category to scrape from Adverts.ie",
+      "editor": "select",
+      "enum": [
+        "for-sale",
+        "motors",
+        "property-for-sale",
+        "property-to-rent",
+        "jobs",
+        "services"
+      ],
+      "prefill": "for-sale"
+    },
+    "subcategory": {
+      "type": "string",
+      "title": "Subcategory (optional)",
+      "description": "Narrow down to specific subcategory (e.g., 'cars', 'bikes', 'furniture')",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "county": {
+      "type": "string",
+      "title": "County",
+      "description": "Filter by Irish county (leave empty for all Ireland)",
+      "editor": "select",
+      "enum": [
+        "",
+        "Dublin",
+        "Cork",
+        "Galway",
+        "Limerick",
+        "Waterford",
+        "Kerry",
+        "Clare",
+        "Donegal",
+        "Mayo",
+        "Meath"
+      ],
+      "prefill": ""
+    },
+    "minPrice": {
+      "type": "integer",
+      "title": "Minimum Price (\u20ac)",
+      "description": "Filter results by minimum price (0 for no limit)",
+      "editor": "number",
+      "minimum": 0,
+      "prefill": 0
+    },
+    "maxPrice": {
+      "type": "integer",
+      "title": "Maximum Price (\u20ac)",
+      "description": "Filter results by maximum price (999999 for no limit)",
+      "editor": "number",
+      "minimum": 0,
+      "prefill": 999999
+    },
+    "searchQuery": {
+      "type": "string",
+      "title": "Search Query (optional)",
+      "description": "Keyword search within category (e.g., 'iPhone', 'sofa', 'bike')",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "maxResults": {
+      "type": "integer",
+      "title": "Max Results",
+      "description": "Maximum number of listings to scrape (higher values increase cost)",
+      "default": 3,
+      "minimum": 1,
+      "maximum": 10000,
+      "editor": "number",
+      "prefill": 3
+    },
+    "proxyConfiguration": {
+      "type": "object",
+      "title": "Proxy Configuration",
+      "description": "Select proxy group (RESIDENTIAL recommended for Cloudflare bypass)",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": [
+          "RESIDENTIAL"
+        ]
+      }
+    }
+  }
+}
