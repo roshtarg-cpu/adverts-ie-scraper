@@ -2,51 +2,15 @@
   "$schema": "https://apify.com/schemas/v1/dataset.ide.json",
   "actorSpecification": 1,
   "fields": {
-    "url": {
-      "type": "string",
-      "title": "URL",
-      "description": "Direct link to the listing"
-    },
-    "title": {
-      "type": "string",
-      "title": "Title",
-      "description": "Listing title"
-    },
-    "price": {
-      "type": "string",
-      "title": "Price",
-      "description": "Listed price in EUR"
-    },
-    "currency": {
-      "type": "string",
-      "title": "Currency",
-      "description": "Price currency (EUR)"
-    },
-    "location": {
-      "type": "string",
-      "title": "Location",
-      "description": "County or city in Ireland"
-    },
-    "description": {
-      "type": "string",
-      "title": "Description",
-      "description": "Full listing description"
-    },
-    "image": {
-      "type": "string",
-      "title": "Image URL",
-      "description": "Main listing image"
-    },
-    "category": {
-      "type": "string",
-      "title": "Category",
-      "description": "Listing category"
-    },
-    "scrapedAt": {
-      "type": "string",
-      "title": "Scraped At",
-      "description": "ISO 8601 timestamp"
-    }
+    "url": "string",
+    "title": "string",
+    "price": "string",
+    "currency": "string",
+    "location": "string",
+    "description": "string",
+    "image": "string",
+    "category": "string",
+    "scrapedAt": "string"
   },
   "views": {
     "overview": {
